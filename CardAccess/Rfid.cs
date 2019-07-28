@@ -15,8 +15,7 @@ namespace CardAccess
 
         public IList<string> Read()
         {
-            var res = pa.Execute(ScriptName.Read);
-            return res;
+            return pa.Execute(ScriptName.Read);
         }
 
         public void Write(string content)

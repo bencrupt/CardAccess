@@ -59,23 +59,5 @@ namespace CardAccess.Properties {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Maskin Svets 1.
-        /// </summary>
-        internal static string MachineName {
-            get {
-                return ResourceManager.GetString("MachineName", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 17.
-        /// </summary>
-        internal static string RelayPin {
-            get {
-                return ResourceManager.GetString("RelayPin", resourceCulture);
-            }
-        }
     }
 }

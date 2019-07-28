@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "CardAccess": {
+      "commandName": "Project",
+      "commandLineArgs": "-p 17 -m Svets1"
+    }
+  }
+}
