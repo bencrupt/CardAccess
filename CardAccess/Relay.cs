@@ -7,26 +7,29 @@ namespace CardAccess
     class Relay : IRelay
     {
         private int controlPin;
-        private bool? isOn;
         private IPythonAccess pa;
 
         public Relay(int controlPin)
         {
             this.controlPin = controlPin;
             pa = new PythonAccess();
+            IsOn = true;
+            TurnOff();
         }
+
+        public bool IsOn { get; set; }
         public void TurnOff()
         {
-            if (!isOn.HasValue || isOn.Value)
+            if (IsOn)
                 pa.Execute(ScriptName.Off, controlPin.ToString());
-            isOn = false;
+            IsOn = false;
         }
 
         public void TurnOn()
         {
-            if (!isOn.HasValue || !isOn.Value)
+            if (!IsOn)
                 pa.Execute(ScriptName.On, controlPin.ToString());
-            isOn = true;
+            IsOn = true;
         }
     }
 }
